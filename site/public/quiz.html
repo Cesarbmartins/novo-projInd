@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <img src="./assets/logo.png" id="logo">
+
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="login.html">Login</a> </li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="container">
+            <div class="caixa-quiz" id="caixa_quiz">
+                <p>Você entende mesmo de one piece?</p>
+                <img src="" alt="" id="imgdoquiz">
+                <button onclick="pergunta1()">Iniciar quiz!</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="container">
+
+            <h4>Privacidade</h4>
+            <ul>
+                <li>Política de privacidade</li>
+                <li>Política de Cookies</li>
+            </ul>
+        </div>
+
+
+        <div class="container2">
+            <h4>Redes sociais</h4>
+            <div class="redes">
+                <p>Instagram</p>
+                <p>Facebook</p>
+                <p>Twitter</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var respostas_certas = 0
+
+    function pergunta1() {
+
+        caixa_quiz.innerHTML = `<p>Qual o nome desse personagem?</p>
+        <img src="./assets/gaimon.jpg" alt="" id="imgdoquiz">
+        <input id="in_resposta">
+        <button onclick="pergunta2()">Responder</button>    
+        `
+        
+
+       
+    }
+
+    function pergunta2() {
+        var resposta = in_resposta.value.toUpperCase()
+        if (resposta == 'GAIMON') {
+            respostas_certas++
+        } 
+       
+        caixa_quiz.innerHTML = `<p>Qual o nome do primeiro vilão que Luffy enfrentou?</p>
+        <img src="./assets/alvida.jpg" alt="" id="imgdoquiz">
+        <input id="in_resposta">
+        <button onclick="pergunta3()">Responder</button>  
+`
+
+    }
+
+    function pergunta3() {
+        var resposta = in_resposta.value.toUpperCase()
+        if (resposta == 'ALVIDA') {
+            respostas_certas++
+        } 
+
+
+        caixa_quiz.innerHTML = `<p>Qual o nome desse personagem?😏</p>
+        <img src="./assets/pica.jpg" alt="" id="imgdoquiz">
+        <input id="in_resposta">
+        <button onclick="pergunta4()">Responder</button>  
+`
+
+    }
+
+    function pergunta4() {
+      
+        var resposta = in_resposta.value.toUpperCase()
+        if (resposta == 'PICA') {
+            respostas_certas++
+        }
+        caixa_quiz.innerHTML = `<p>"Eu não quero conquistar nada, só acho que a pessoa com mais liberdade do mundo é o rei dos piratas!" Em qual episódio do anime Luffy diz essa frease?</p>
+        <img src="./assets/luffysorrindo.gif" alt="" id="imgdoquiz">
+        <select id="sel_resposta">
+    <option value="">--Escolha--</option>
+    <option value="400">400</option>
+    <option value="394">394</option>
+    <option value="415">415</option>
+    <option value="396">396</option>
+   </select>
+   
+        <button onclick="pergunta5()">Responder</button>  
+`
+       
+
+    }
+
+    function pergunta5() {
+        var resposta = Number(sel_resposta.value)
+        if (resposta == 400) {
+            respostas_certas++
+        } 
+        caixa_quiz.innerHTML = `<p>Em qual episódio Luffy usa a gear second pela primeira vez?</p>
+        <img src="./assets/gearsecond.gif" alt="" id="imgdoquiz">
+        <select id="sel_resposta">
+    <option value="">--Escolha--</option>
+    <option value="270">270</option>
+    <option value="272">272</option>
+    <option value="275">275</option>
+    <option value="282">282</option>
+   </select>
+   
+        <button onclick="pergunta6()">Responder</button>  
+`
+        
+    }
+
+    function pergunta6() {
+        var resposta = Number(sel_resposta.value)
+        if (resposta == 272) {
+            respostas_certas++
+        } 
+
+        
+        caixa_quiz.innerHTML = `<p>Em que ano One Piece foi lançado?</p>
+        <img src="./assets/onepiece.gif" alt="" id="imgdoquiz">
+        <select id="sel_resposta">
+    <option value="">--Escolha--</option>
+    <option value="1994">1994</option>
+    <option value="1996">1996</option>
+    <option value="1997">1997</option>
+    <option value="1999">1999</option>
+   </select>
+   
+        <button onclick="pergunta7()">Responder</button>  
+`
+        
+    }
+
+    function pergunta7() {
+        var resposta = Number(sel_resposta.value)
+        if (resposta == 1997) {
+            respostas_certas++
+        } 
+
+        
+        caixa_quiz.innerHTML = `<p>Qual o verdadeiro nome do rei dos Piratas?</p>
+        <img src="./assets/goldroger.jpg" alt="" id="imgdoquiz">
+        <input id="in_resposta">
+        <button onclick="pergunta8()">Responder</button>  
+`
+       
+
+    }
+
+    function pergunta8() {
+        var resposta = in_resposta.value.toUpperCase()
+        if (resposta == 'GOL D. ROGER') {
+            respostas_certas++
+        } 
+        
+        caixa_quiz.innerHTML = `<p>Qual o nome do Barba branca?</p>
+        <img src="./assets/newgate.jpg" alt="" id="imgdoquiz">
+        <input id="in_resposta">
+        <button onclick="pergunta9()">Responder</button>  
+`
+        
+
+    }
+    function pergunta9() {
+        var resposta = in_resposta.value.toUpperCase()
+        if (resposta == 'EDWARD NEWGATE') {
+            respostas_certas++
+        } 
+        
+        caixa_quiz.innerHTML = `<p>Qual o nome dessa personagem?</p>
+        <img src="./assets/boasandersonia.png" alt="" id="imgdoquiz">
+        <input id="in_resposta">
+        <button onclick="pergunta10()">Responder</button>  
+`
+        
+    }
+
+    function pergunta10() {
+        var resposta = in_resposta.value.toUpperCase()
+        if (resposta == 'BOA SANDERSONIA') {
+            respostas_certas++
+        } 
+
+       
+        caixa_quiz.innerHTML = `<p>Qual o nome dessa personagem?</p>
+        <img src="./assets/boamarigold.jpg" alt="" id="imgdoquiz">
+        <input id="in_resposta">
+        <button onclick="fim_quiz()">Responder</button>  
+`
+        
+    }
+
+    function fim_quiz(){
+        var resposta = in_resposta.value.toUpperCase()
+        if (resposta == 'BOA MARIGOLD') {
+            respostas_certas++
+        }
+        
+        if(respostas_certas<=5){
+            caixa_quiz.innerHTML=`<p>Você realmente assistiu one piece?</p>
+        <img src="./assets/luffyrindo.gif" alt="" id="imgdoquiz">
+        <p>Respostas certas:<span id="sp_certas"></span></p>
+        `
+        } else{
+            caixa_quiz.innerHTML=`<p> Ihhh assistiu o piratinha que estica mesmo</p>
+        <img src="./assets/luffycrianca.gif" alt="" id="imgdoquiz">
+        <p>Respostas certas:<span id="sp_certas"></span></p>
+        `
+        }
+       sp_certas.innerHTML=respostas_certas
+    }
+
+
+</script>

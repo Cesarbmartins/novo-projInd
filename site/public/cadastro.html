@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <script src="./js/funcoes.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <img src="./assets/logo.png" id="logo">
+
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="login.html">Login</a> </li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="caixa-formulario">
+                <h2>Cadastro pirata☠</h2>
+                <div class="campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="email@email.com">
+                </div>
+                <div class="campo">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="user_name">
+                </div>
+                <div class="campo">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" placeholder="********">
+                </div>
+                <div class="campo">
+                    <label for="confirma">Confirmação de senha:</label>
+                    <input type="password" id="confirma" placeholder="********">
+                </div>
+                <div class="campo">
+                    <label for="favorito">Mugiwara favorito:</label>
+                    <select name="favorito" id="favorito">
+                        <option value="">--Mugiwara</option>
+                        <option value="luffy">Luffy</option>
+                        <option value="zoro">Zoro</option>
+                        <option value="nami">Nami</option>
+                        <option value="sanji">Sanji</option>
+                        <option value="usopp">Usopp</option>
+                        <option value="chopper">Chopper</option>
+                        <option value="robin">Robin</option>
+                        <option value="franky">Franky</option>
+                        <option value="brook">Brook</option>
+                        <option value="brook">Brook</option>
+                        <option value="jimbei">Jimbei</option>
+                    </select>
+                </div>
+                <button onclick="cadastrar()">Cadastrar</button>
+                <div class="loading-div" id="div_aguardar">
+             <img src="./assets/circle-loading.gif" alt="" id="loading-gif">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+
+            <h4>Privacidade</h4>
+            <ul>
+                <li>Política de privacidade</li>
+                <li>Política de Cookies</li>
+            </ul>
+        </div>
+
+
+        <div class="container2">
+            <h4>Redes sociais</h4>
+            <div class="redes">
+                <p>Instagram</p>
+                <p>Facebook</p>
+                <p>Twitter</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function cadastrar() {
+        aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var emailVar = email.value;
+        var userVar = username.value;
+        var senhaVar = password.value;
+        var confirmacaoSenhaVar = confirma.value;
+        var personagemVar=favorito.value
+
+        if (userVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == ""||personagemVar=="") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                userServer: userVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                confirmaServer:confirmacaoSenhaVar,
+                personagemServer:personagemVar
+        
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                cardErro.style.display = "block";
+
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+                
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+</script>
