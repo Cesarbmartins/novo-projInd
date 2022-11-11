@@ -60,8 +60,8 @@ li a {
 }
 .caixa-quiz{
     background-image: url("./assets/backgroundquizcaixa.gif");
-    width: 500px;
-    height: 50vh;
+    width: 80%;
+    height: 80vh;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -73,23 +73,31 @@ li a {
 .caixa-quiz p{
     color: black;
     background-color: red;
-    font-size: large;
+    font-size: larger;
+    width: 500px;
+    text-align: center;
 }
 .caixa-quiz input{
     color: black;
+    width: 300px;
+    height: 4vh;
 }
 
 .caixa-quiz select, option{
     color: black;
+    width: 300px;
 }
 
 .caixa-quiz button{
-    width: 150px;
+    width: 300px;
     margin: 15px;
     color: black;
     background-color: red;
+    height: 4vh;
+    font-size: large;
 }
 
 #imgdoquiz{
-    width: 150px;
+    width: 300px;
+    
 }
