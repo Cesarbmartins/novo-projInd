@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AquaTech | Dashboards</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="dashboards.css">
     <script src="../js/funcoes.js"></script>
 
@@ -28,7 +28,7 @@
 
     <div class="janela">
         <div class="header-left">
-            <h1>One piece</h1>
+            <h1>AquaTech</h1>
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
@@ -95,9 +95,9 @@
 
     verificar_autenticacao();
 
-    function alterarTitulo(idAquario) {
+    function alterarTitulo(idSemana) {
         var tituloAquario = document.getElementById("tituloAquario")
-        tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idAquario + "</span>"
+        tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idSemana + "</span>"
     }
 
     // O gráfico é construído com três funções:
@@ -111,20 +111,20 @@
 
     //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
     //     Para ajustar o "select", ajuste o comando sql em src/models
-    function obterDadosGrafico(idAquario) {
-        alterarTitulo(idAquario)
+    function obterDadosGrafico(idSemana) {
+        alterarTitulo(idSemana)
 
         if (proximaAtualizacao != undefined) {
             clearTimeout(proximaAtualizacao);
         }
 
-        fetch(`/medidas/ultimas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+        fetch(`/medidas/ultimas/${idSemana}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     resposta.reverse();
 
-                    plotarGrafico(resposta, idAquario);
+                    plotarGrafico(resposta, idSemana);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
@@ -138,7 +138,7 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico(resposta, idAquario) {
+    function plotarGrafico(resposta, idSemana) {
         console.log('iniciando plotagem do gráfico...');
 
         // Criando estrutura para plotar gráfico - labels
@@ -195,7 +195,7 @@
             config
         );
 
-        setTimeout(() => atualizarGrafico(idAquario, dados, myChart), 2000);
+        setTimeout(() => atualizarGrafico(idSemana, dados, myChart), 2000);
     }
 
 
@@ -204,9 +204,9 @@
 
     //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
     //     Para ajustar o "select", ajuste o comando sql em src/models
-    function atualizarGrafico(idAquario, dados, myChart) {
+    function atualizarGrafico(idSemana, dados, myChart) {
 
-        fetch(`/medidas/tempo-real/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+        fetch(`/medidas/tempo-real/${idSemana}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (novoRegistro) {
 
@@ -240,12 +240,12 @@
                     }
 
                     // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados, myChart), 2000);
+                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idSemana, dados, myChart), 2000);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
                 // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados, myChart), 2000);
+                proximaAtualizacao = setTimeout(() => atualizarGrafico(idSemana, dados, myChart), 2000);
             }
         })
             .catch(function (error) {
