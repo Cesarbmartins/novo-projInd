@@ -59,17 +59,24 @@ li a {
     background-color: rgb(184, 0, 0);
     width: 90%;
     height: 100vh;
-}
-
-.banner h2{
-    font-size: larger;
    
 }
 
-.banner p{
-    font-size: medium;
+
+.banner h2{
+    font-size: larger;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin:10px 10px;
 }
 
+.banner p{
+    font-size:large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin:15px 15px ;
+  width: 500px;    
+}
+
+
 #img_sobre{
- width: 40%;
+ width:500px;
 }
