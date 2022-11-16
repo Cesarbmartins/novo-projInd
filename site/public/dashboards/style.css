@@ -14,11 +14,13 @@ body {
 }
 
 .header {
-  border-bottom: 3px solid #32b9cd;
+  color: rgb(240, 240, 6);
+  font-family: fantasy
 }
 
 .header .container {
   justify-content: space-between;
+  color: rgb(240, 240, 6);
 }
 
 .header a {
@@ -36,12 +38,12 @@ body {
   align-items: center;
   justify-content: space-between;
   list-style: none;
-  color: #e3b062;
+  color: rgb(240, 240, 6);
 }
 
 
 .titulo {
-  color: #32b9cd;
+  color: rgb(240, 240, 6);
   width: fit-content;
   font-weight: 500;
 }
@@ -49,20 +51,9 @@ body {
 
 /* BANNER */
 
-.banner {
-  height: fit-content;
-  padding: 40px 0;
-  color: white;
-  background-image: url(".././assets/imgs/bg-jelly-fish-para_outras_pags.png");
-  background-size: cover;
-}
 
-.banner .container {
-  height: 400px;
-  font-size: 36px;
-  justify-content: center;
-  align-items: center;
-}
+
+
 
 .tamanho-conteudo { 
   height: fit-content !important;
@@ -82,61 +73,7 @@ body {
 
 /* missao visao valores */
 
-.social {
-  background-color: #e5e5e5;
-  display: flex;
-}
 
-.social .container{
-  justify-content: center;
-}
-
-.box img {
-  width: 170px;
-}
-
-.social .container .boxes {
-  display: flex;
-}
-
-.social p {
-  text-align: center;
-}
-
-.box {
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-.box {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-/* FOOTER */
-
-.footer {
-  background-color: #32b9cd;
-  height: 150px;
-  color: #fff;
-  display: flex;
-  font-size: 15px;
-}
-
-.footer .container {
-  justify-content: center;
-  text-align: center;
-}
-
-.footer .container .version {
-  font-size: 12px;
-}
 
 
 /* LOGIN */
@@ -147,7 +84,7 @@ body {
   width: 400px;
   display: flex;
   flex-direction: column;
-  color: palevioletred;
+
   align-items: center;
   border-radius: 4px;
 }
@@ -222,8 +159,6 @@ input {
   font-weight: 600;
   font-size: 18px;
   padding: 10px 15px;
-  color: white;
-  background-color: #e6005a;
   width: 120px;
   align-self: center;
   margin-top: 5px;
@@ -249,7 +184,7 @@ input {
 
 .header-left a {
   text-decoration: none;
-  color: white;
+  color: rgb(240, 240, 6);
 }
 
 .header-left {
@@ -263,7 +198,7 @@ input {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-right: 3px solid #32b9cd;
+  border-right: 3px solid red;
   background-color: #212124;
   /* border: 3px solid pink; */
 }
@@ -279,7 +214,7 @@ input {
 }
 
 .header-left h1 {
-  color: #32b9cd;
+  color: rgb(240, 240, 6);
 }
 
 .hello {
@@ -289,7 +224,7 @@ input {
 }
 
 .hello h3 {
-  color: #e3b062;
+  color: rgb(240, 240, 6);
   font-weight: 300;
   font-size: 1.2rem;
 }
@@ -300,8 +235,8 @@ input {
 
 .btn-nav {
   width: 40%;
-  color: white;
-  background-color: #e6005a;
+  color: red;
+  background-color: black;
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
@@ -309,15 +244,15 @@ input {
 
 .btn-nav-white {
   width: 40%;
-  background-color: white;
-  border: 3px solid #e6005a;
+  background-color: black;
+  border: 3px solid red;
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
 }
 
 .btn-nav-white h3 {
-  color: #e6005a;
+  color:red;
   padding: 0;
   margin: 0;
 }
@@ -326,14 +261,15 @@ input {
 .btn-logout h3 {
   margin: 0;
   padding: 0;
+  
 }
 
 .btn-logout {
   margin: 0;
   padding: 0;
   width: 20%;
-  background-color: #32b9cd;
-  color: white;
+  background-color: blue;
+  color: rgb(240, 240, 6);
   border-radius: 10px;
   text-align: center;
   padding: 10px 15px;

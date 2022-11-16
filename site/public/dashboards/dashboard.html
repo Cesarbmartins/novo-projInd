@@ -28,7 +28,7 @@
 
     <div class="janela">
         <div class="header-left">
-            <h1>AquaTech</h1>
+            <h1>One Project</h1>
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
@@ -36,7 +36,7 @@
 
             <div class="btn-nav-white">
                 <a href="./cards.html">
-                    <h3>Aquários</h3>
+                    <h3>História</h3>
                 </a>
             </div>
 
@@ -48,7 +48,7 @@
 
             <div class="btn-nav-white">
                 <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
+                    <h3>Mural de coments</h3>
                 </a>
             </div>
 
@@ -61,10 +61,7 @@
         <div class="dash">
             <div class="btns-dash">
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Aquario 1</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(2)">Aquario 2</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(3)">Aquario 3</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(4)">Aquario 4</button>
+                
             </div>
             <div>
                 <h3 class="tituloGraficos">
@@ -87,7 +84,7 @@
 
 <script>
     
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_usuario.innerHTML = sessionStorage.EMAIL_USUARIO;
     
     let proximaAtualizacao;
         
@@ -97,7 +94,7 @@
 
     function alterarTitulo(idSemana) {
         var tituloAquario = document.getElementById("tituloAquario")
-        tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idSemana + "</span>"
+        tituloAquario.innerHTML = "Medidas de entrada de usuários nas ultimas <span style='color: rgb(240, 240, 6)'>Semanas " + idSemana + "</span>"
     }
 
     // O gráfico é construído com três funções:
