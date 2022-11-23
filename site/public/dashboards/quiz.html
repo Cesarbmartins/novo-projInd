@@ -73,6 +73,18 @@
 <script>
     var respostas_certas = 0
     var respostas=[]
+
+    var um=0
+    var dois=0
+    var tres=0
+    var quatro=0
+    var cinco=0
+    var seis=0
+    var sete=0
+    var oito=0
+    var nove=0
+    var dez=0
+
     function pergunta1() {
 
         caixa_quiz.innerHTML = `<p>Qual o nome desse personagem?</p>
@@ -89,6 +101,7 @@
         var resposta = in_resposta.value.toUpperCase()
         if (resposta == 'GAIMON') {
             respostas_certas++
+        um++
         } 
        respostas.push(resposta)
 
@@ -105,6 +118,7 @@
         var resposta = in_resposta.value.toUpperCase()
         if (resposta == 'ALVIDA') {
             respostas_certas++
+            dois++
         } 
        
         respostas.push(resposta)
@@ -122,6 +136,7 @@
         var resposta = in_resposta.value.toUpperCase()
         if (resposta == 'PICA') {
             respostas_certas++
+            tres++
         }
 
         respostas.push(resposta)
@@ -146,6 +161,7 @@
         var resposta = Number(sel_resposta.value)
         if (resposta == 400) {
             respostas_certas++
+            quatro++
         } 
 
         respostas.push(resposta)
@@ -169,6 +185,7 @@
         var resposta = Number(sel_resposta.value)
         if (resposta == 272) {
             respostas_certas++
+            cinco++
         } 
 respostas.push(resposta)
         
@@ -191,6 +208,7 @@ respostas.push(resposta)
         var resposta = Number(sel_resposta.value)
         if (resposta == 1997) {
             respostas_certas++
+            seis++
         } 
         respostas.push(resposta)
         
@@ -207,6 +225,7 @@ respostas.push(resposta)
         var resposta = in_resposta.value.toUpperCase()
         if (resposta == 'GOL D. ROGER') {
             respostas_certas++
+            sete++
         } 
         
         respostas.push(resposta)
@@ -223,6 +242,7 @@ respostas.push(resposta)
         var resposta = in_resposta.value.toUpperCase()
         if (resposta == 'EDWARD NEWGATE') {
             respostas_certas++
+            oito++
         } 
         
         respostas.push(resposta)
@@ -239,6 +259,7 @@ respostas.push(resposta)
         var resposta = in_resposta.value.toUpperCase()
         if (resposta == 'BOA SANDERSONIA') {
             respostas_certas++
+            nove++
         } 
 
        respostas.push(resposta)
@@ -255,6 +276,7 @@ respostas.push(resposta)
         var resposta = in_resposta.value.toUpperCase()
         if (resposta == 'BOA MARIGOLD') {
             respostas_certas++
+            dez++
         }
        
         respostas.push(resposta)
@@ -318,5 +340,8 @@ respostas.push(resposta)
 
     function sumirMensagem() {
         cardErro.style.display = "none"
+    
     }
+
+
 </script>
