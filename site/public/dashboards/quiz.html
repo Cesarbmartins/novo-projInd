@@ -72,7 +72,7 @@
 </html>
 <script>
     var respostas_certas = 0
-
+    var respostas=[]
     function pergunta1() {
 
         caixa_quiz.innerHTML = `<p>Qual o nome desse personagem?</p>
@@ -90,7 +90,9 @@
         if (resposta == 'GAIMON') {
             respostas_certas++
         } 
-       
+       respostas.push(resposta)
+
+
         caixa_quiz.innerHTML = `<p>Qual o nome do primeiro vilão que Luffy enfrentou?</p>
         <img src="../assets/alvida.jpg" alt="" id="imgdoquiz">
         <input id="in_resposta">
@@ -104,7 +106,8 @@
         if (resposta == 'ALVIDA') {
             respostas_certas++
         } 
-
+       
+        respostas.push(resposta)
 
         caixa_quiz.innerHTML = `<p>Qual o nome desse personagem?😏</p>
         <img src="../assets/pica.jpg" alt="" id="imgdoquiz">
@@ -120,6 +123,9 @@
         if (resposta == 'PICA') {
             respostas_certas++
         }
+
+        respostas.push(resposta)
+                
         caixa_quiz.innerHTML = `<p>"Eu não quero conquistar nada, só acho que a pessoa com mais liberdade do mundo é o rei dos piratas!" Em qual episódio do anime Luffy diz essa frease?</p>
         <img src="../assets/luffysorrindo.gif" alt="" id="imgdoquiz">
         <select id="sel_resposta">
@@ -141,6 +147,9 @@
         if (resposta == 400) {
             respostas_certas++
         } 
+
+        respostas.push(resposta)
+
         caixa_quiz.innerHTML = `<p>Em qual episódio Luffy usa a gear second pela primeira vez?</p>
         <img src="../assets/gearsecond.gif" alt="" id="imgdoquiz">
         <select id="sel_resposta">
@@ -161,7 +170,7 @@
         if (resposta == 272) {
             respostas_certas++
         } 
-
+respostas.push(resposta)
         
         caixa_quiz.innerHTML = `<p>Em que ano One Piece foi lançado?</p>
         <img src="../assets/onepiece.gif" alt="" id="imgdoquiz">
@@ -183,7 +192,7 @@
         if (resposta == 1997) {
             respostas_certas++
         } 
-
+        respostas.push(resposta)
         
         caixa_quiz.innerHTML = `<p>Qual o verdadeiro nome do rei dos Piratas?</p>
         <img src="../assets/goldroger.jpg" alt="" id="imgdoquiz">
@@ -200,6 +209,8 @@
             respostas_certas++
         } 
         
+        respostas.push(resposta)
+
         caixa_quiz.innerHTML = `<p>Qual o nome do Barba branca?</p>
         <img src="../assets/newgate.jpg" alt="" id="imgdoquiz">
         <input id="in_resposta">
@@ -214,6 +225,8 @@
             respostas_certas++
         } 
         
+        respostas.push(resposta)
+
         caixa_quiz.innerHTML = `<p>Qual o nome dessa personagem?</p>
         <img src="../assets/boasandersonia.png" alt="" id="imgdoquiz">
         <input id="in_resposta">
@@ -228,7 +241,8 @@
             respostas_certas++
         } 
 
-       
+       respostas.push(resposta)
+
         caixa_quiz.innerHTML = `<p>Qual o nome dessa personagem?</p>
         <img src="../assets/boamarigold.jpg" alt="" id="imgdoquiz">
         <input id="in_resposta">
@@ -242,7 +256,9 @@
         if (resposta == 'BOA MARIGOLD') {
             respostas_certas++
         }
-        
+       
+        respostas.push(resposta)
+
         if(respostas_certas<=5){
             caixa_quiz.innerHTML=`<p>Você realmente assistiu one piece?</p>
         <img src="../assets/luffyrindo.gif" alt="" id="imgdoquiz">
