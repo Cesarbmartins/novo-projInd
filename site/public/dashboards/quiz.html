@@ -290,10 +290,19 @@ respostas.push(resposta)
             caixa_quiz.innerHTML=`<p> Ihhh assistiu o piratinha que estica mesmo</p>
         <img src="../assets/luffycrianca.gif" alt="" id="imgdoquiz">
         <p>Respostas certas:<span id="sp_certas"></span></p>
+        
         `
         }
        sp_certas.innerHTML=respostas_certas
     
+     if(um==0){
+        div_respostas.innerHTML=`Sua resposta:${resposta[0]} Resposta certa: Gaimon`
+     }
+   
+     
+     if(dois==0){
+        div_respostas.innerHTML=`Sua resposta:${resposta[1]} Resposta certa: Alvida `
+     }
 
         aguardar();
 
