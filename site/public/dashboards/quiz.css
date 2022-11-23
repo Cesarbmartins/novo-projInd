@@ -5,47 +5,11 @@
     font-family: fantasy;
 }
 
-.header {
-    padding: 10px;
-    background-color: black;
-    font-size: large;
-    font-style: oblique;
-}
 
-.container {
-    margin: 0 auto;
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
-#logo {
-    width: 100px;
-}
-
-h1 {
-    color: rgb(240, 240, 6);
-    font-weight: 800;
-}
-
-ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 300px;
-    list-style: none;
-}
-
-li a {
-    color: rgb(240, 240, 6);
-    width: 100px;
-    text-decoration: none;
-    cursor: pointer;
-}
 
 .banner {
-    background-image: url("./assets/fundoquiz.jpg");
+    background-image: url("../assets/fundoquizz.jpg");
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -57,9 +21,10 @@ li a {
 .banner .container{
     justify-content: center;
     align-items: center;
+    padding-left: 300px;
 }
 .caixa-quiz{
-    background-image: url("./assets/backgroundquizcaixa.gif");
+    background-image: url("../assets/backgroundquizcaixa.gif");
     width: 80%;
     height: 80vh;
     background-size: cover;

@@ -6,56 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="estilodash.css">
+    <script src="../js/funcoes.js"></script>
+   
     <title>Document</title>
 </head>
 
-<body>
-    <div class="header">
-        <div class="container">
-            <img src="./assets/logo.png" id="logo">
-
-            <div class="navbar">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="cadastro.html">Cadastro</a></li>
-                    <li><a href="login.html">Login</a> </li>
-                    <li><a href="quiz.html">Quiz</a></li>
-                </ul>
+    
+    <body >
+    
+        <div class="janela">
+            <div class="header-left">
+                <h1>One Project</h1>
+    
+                <div class="hello">
+                    <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                </div>
+    
+                <div class="btn-nav-white">
+                    <a href="">
+                        <h3>Quiz</h3>
+                    </a>
+                </div>
+    
+                <div class="btn-nav">
+                   <a href="dashboard.html">
+                    <h3>Gráficos</h3>
+                </a>
+                </div>
+    
+                <div class="btn-nav-white">
+                    <a href="./mural.html">
+                        <h3>Mural de coments</h3>
+                    </a>
+                </div>
+    
+                <div class="btn-logout" onclick="limparSessao()">
+                    <h3>Sair</h3>
+                </div>
+    
             </div>
-        </div>
-    </div>
 
     <div class="banner">
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
         <div class="container">
             <div class="caixa-quiz" id="caixa_quiz">
                 <p>Você entende mesmo de one piece?</p>
                 <img src="" alt="" id="imgdoquiz">
                 <button onclick="pergunta1()">Iniciar quiz!</button>
             </div>
+            <div class="loading-div" id="div_aguardar">
+                <img src="./assets/circle-loading.gif" alt="" id="loading-gif">
+                   </div>
         </div>
     </div>
 
 
-    <div class="footer">
-        <div class="container">
-
-            <h4>Privacidade</h4>
-            <ul>
-                <li>Política de privacidade</li>
-                <li>Política de Cookies</li>
-            </ul>
-        </div>
-
-
-        <div class="container2">
-            <h4>Redes sociais</h4>
-            <div class="redes">
-                <p>Instagram</p>
-                <p>Facebook</p>
-                <p>Twitter</p>
-            </div>
-        </div>
-    </div>
+    
 </body>
 
 </html>
@@ -65,7 +76,7 @@
     function pergunta1() {
 
         caixa_quiz.innerHTML = `<p>Qual o nome desse personagem?</p>
-        <img src="./assets/gaimon.jpg" alt="" id="imgdoquiz">
+        <img src="../assets/gaimon.jpg" alt="" id="imgdoquiz">
         <input id="in_resposta">
         <button onclick="pergunta2()">Responder</button>    
         `
@@ -81,7 +92,7 @@
         } 
        
         caixa_quiz.innerHTML = `<p>Qual o nome do primeiro vilão que Luffy enfrentou?</p>
-        <img src="./assets/alvida.jpg" alt="" id="imgdoquiz">
+        <img src="../assets/alvida.jpg" alt="" id="imgdoquiz">
         <input id="in_resposta">
         <button onclick="pergunta3()">Responder</button>  
 `
@@ -96,7 +107,7 @@
 
 
         caixa_quiz.innerHTML = `<p>Qual o nome desse personagem?😏</p>
-        <img src="./assets/pica.jpg" alt="" id="imgdoquiz">
+        <img src="../assets/pica.jpg" alt="" id="imgdoquiz">
         <input id="in_resposta">
         <button onclick="pergunta4()">Responder</button>  
 `
@@ -110,7 +121,7 @@
             respostas_certas++
         }
         caixa_quiz.innerHTML = `<p>"Eu não quero conquistar nada, só acho que a pessoa com mais liberdade do mundo é o rei dos piratas!" Em qual episódio do anime Luffy diz essa frease?</p>
-        <img src="./assets/luffysorrindo.gif" alt="" id="imgdoquiz">
+        <img src="../assets/luffysorrindo.gif" alt="" id="imgdoquiz">
         <select id="sel_resposta">
     <option value="">--Escolha--</option>
     <option value="400">400</option>
@@ -131,7 +142,7 @@
             respostas_certas++
         } 
         caixa_quiz.innerHTML = `<p>Em qual episódio Luffy usa a gear second pela primeira vez?</p>
-        <img src="./assets/gearsecond.gif" alt="" id="imgdoquiz">
+        <img src="../assets/gearsecond.gif" alt="" id="imgdoquiz">
         <select id="sel_resposta">
     <option value="">--Escolha--</option>
     <option value="270">270</option>
@@ -153,7 +164,7 @@
 
         
         caixa_quiz.innerHTML = `<p>Em que ano One Piece foi lançado?</p>
-        <img src="./assets/onepiece.gif" alt="" id="imgdoquiz">
+        <img src="../assets/onepiece.gif" alt="" id="imgdoquiz">
         <select id="sel_resposta">
     <option value="">--Escolha--</option>
     <option value="1994">1994</option>
@@ -175,7 +186,7 @@
 
         
         caixa_quiz.innerHTML = `<p>Qual o verdadeiro nome do rei dos Piratas?</p>
-        <img src="./assets/goldroger.jpg" alt="" id="imgdoquiz">
+        <img src="../assets/goldroger.jpg" alt="" id="imgdoquiz">
         <input id="in_resposta">
         <button onclick="pergunta8()">Responder</button>  
 `
@@ -190,7 +201,7 @@
         } 
         
         caixa_quiz.innerHTML = `<p>Qual o nome do Barba branca?</p>
-        <img src="./assets/newgate.jpg" alt="" id="imgdoquiz">
+        <img src="../assets/newgate.jpg" alt="" id="imgdoquiz">
         <input id="in_resposta">
         <button onclick="pergunta9()">Responder</button>  
 `
@@ -204,7 +215,7 @@
         } 
         
         caixa_quiz.innerHTML = `<p>Qual o nome dessa personagem?</p>
-        <img src="./assets/boasandersonia.png" alt="" id="imgdoquiz">
+        <img src="../assets/boasandersonia.png" alt="" id="imgdoquiz">
         <input id="in_resposta">
         <button onclick="pergunta10()">Responder</button>  
 `
@@ -219,14 +230,14 @@
 
        
         caixa_quiz.innerHTML = `<p>Qual o nome dessa personagem?</p>
-        <img src="./assets/boamarigold.jpg" alt="" id="imgdoquiz">
+        <img src="../assets/boamarigold.jpg" alt="" id="imgdoquiz">
         <input id="in_resposta">
-        <button onclick="fim_quiz()">Responder</button>  
+        <button onclick="pontuacao()">Responder</button>  
 `
         
     }
 
-    function fim_quiz(){
+    function pontuacao(){
         var resposta = in_resposta.value.toUpperCase()
         if (resposta == 'BOA MARIGOLD') {
             respostas_certas++
@@ -234,17 +245,62 @@
         
         if(respostas_certas<=5){
             caixa_quiz.innerHTML=`<p>Você realmente assistiu one piece?</p>
-        <img src="./assets/luffyrindo.gif" alt="" id="imgdoquiz">
+        <img src="../assets/luffyrindo.gif" alt="" id="imgdoquiz">
         <p>Respostas certas:<span id="sp_certas"></span></p>
         `
         } else{
             caixa_quiz.innerHTML=`<p> Ihhh assistiu o piratinha que estica mesmo</p>
-        <img src="./assets/luffycrianca.gif" alt="" id="imgdoquiz">
+        <img src="../assets/luffycrianca.gif" alt="" id="imgdoquiz">
         <p>Respostas certas:<span id="sp_certas"></span></p>
         `
         }
        sp_certas.innerHTML=respostas_certas
+    
+
+        aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+       var totalVar=respostas_certas
+        
+
+        // Enviando o valor da nova input
+        fetch("/quiz/pontuacao", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                totalServer:totalVar
+        
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                cardErro.style.display = "block";
+
+
+               
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    
+
     }
 
-
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
 </script>
