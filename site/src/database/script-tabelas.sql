@@ -23,7 +23,7 @@ insert into personagem values
 
 
 create table usuario(
-idUsuario int primary key auto_increment,
+id int primary key auto_increment,
 email varchar(45),
 user varchar(45),
 senha varchar(45),
@@ -35,9 +35,28 @@ create table quiz(
 idQuiz int,
 total int,
 fkUsuario int,
-foreign key (fkUsuario) references usuario(idUsuario),
+foreign key (fkUsuario) references usuario(id),
 primary key (idQuiz,fkUsuario)
 );
+
+CREATE TABLE aviso (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	titulo VARCHAR(100),
+	descricao VARCHAR(150),
+	fk_usuario INT,
+	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+);
+
+select * from usuario;
+select * from quiz;
+select * from personagem;
+select * from aviso;
+
+
+
+select u.user,p.nome from usuario as u join personagem as p on u.fkPersonagem=p.idPersonagem;
+
+select u.user,q.total from quiz as q join usuario as u on u.idUsuario=q.fkUsuario;
 
 
 
