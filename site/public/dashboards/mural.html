@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AquaTech | Avisos</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./estilodash.css">
     <link rel="stylesheet" href="./dashboards.css">
     <script src="../js/funcoes.js"></script>
 
@@ -26,7 +26,7 @@
 
         <div class="header-left">
 
-            <h1>AquaTech</h1>
+            <h1></h1>
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
@@ -113,7 +113,7 @@
 
 <script>
     
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_usuario.innerHTML = sessionStorage.USER_USUARIO;
 
     function limparFormulario() {
         document.getElementById("form_postagem").reset();
@@ -210,7 +210,7 @@
                         var divPublicacao = document.createElement("div");
                         var spanID = document.createElement("span");
                         var spanTitulo = document.createElement("span");
-                        var spanNome = document.createElement("span");
+                        var spanUser = document.createElement("span");
                         var divDescricao = document.createElement("div");
                         var divButtons = document.createElement("div");
                         var btnEditar = document.createElement("button");
@@ -219,14 +219,14 @@
 
                         spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
                         spanTitulo.innerHTML = "Título: <b>" + publicacao.titulo + "</b>";
-                        spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
+                        spanUser.innerHTML = "Autor: <b>" + publicacao.user + "</b>";
                         divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
                         btnEditar.innerHTML = "Editar";
                         btnDeletar.innerHTML = "Deletar";
 
                         divPublicacao.className = "publicacao";
                         spanTitulo.id = "inputNumero" + publicacao.idAviso;
-                        spanNome.className = "publicacao-nome";
+                        spanUser.className = "publicacao-user";
                         spanTitulo.className = "publicacao-titulo";
                         divDescricao.className = "publicacao-descricao";
 
@@ -241,7 +241,7 @@
                         btnDeletar.setAttribute("onclick", `deletar(${publicacao.idAviso})`);
 
                         divPublicacao.appendChild(spanID);
-                        divPublicacao.appendChild(spanNome);
+                        divPublicacao.appendChild(spanUser);
                         divPublicacao.appendChild(spanTitulo);
                         divPublicacao.appendChild(divDescricao);
                         divPublicacao.appendChild(divButtons);

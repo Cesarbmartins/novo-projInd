@@ -29,7 +29,7 @@
     <div class="banner">
         <div class="container">
             <div class="caixa-formulario">
-                <h2>Entra aí, meu nakama</h2>
+                <h2>Entrar</h2>
                 <div class="campo">
                     <label for="email">E-mail:</label>
                     <input type="email" id="email" placeholder="email@email.com">
@@ -107,7 +107,7 @@
                     console.log(JSON.stringify(json));
 
                     sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.USER_USUARIO = json.user;
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {

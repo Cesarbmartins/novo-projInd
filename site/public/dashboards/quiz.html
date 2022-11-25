@@ -71,6 +71,8 @@
 
 </html>
 <script>
+    b_usuario.innerHTML=sessionStorage.USER_USUARIO
+    
     var respostas_certas = 0
     var respostas=[]
 
@@ -84,6 +86,7 @@
     var oito=0
     var nove=0
     var dez=0
+
 
     function pergunta1() {
 
@@ -285,25 +288,58 @@ respostas.push(resposta)
             caixa_quiz.innerHTML=`<p>Você realmente assistiu one piece?</p>
         <img src="../assets/luffyrindo.gif" alt="" id="imgdoquiz">
         <p>Respostas certas:<span id="sp_certas"></span></p>
+
+        <div id="div_respostas"></div>
         `
         } else{
             caixa_quiz.innerHTML=`<p> Ihhh assistiu o piratinha que estica mesmo</p>
         <img src="../assets/luffycrianca.gif" alt="" id="imgdoquiz">
         <p>Respostas certas:<span id="sp_certas"></span></p>
-        
+        <div id="div_respostas"></div>
         `
         }
        sp_certas.innerHTML=respostas_certas
     
      if(um==0){
-        div_respostas.innerHTML=`Sua resposta:${resposta[0]} Resposta certa: Gaimon`
+        div_respostas.innerHTML=`Sua resposta:${respostas[0]} Resposta certa: Gaimon`
      }
    
      
      if(dois==0){
-        div_respostas.innerHTML=`Sua resposta:${resposta[1]} Resposta certa: Alvida `
+        div_respostas.innerHTML+=`Sua resposta:${respostas[1]} Resposta certa: Alvida `
      }
 
+     if(tres==0){
+        div_respostas.innerHTML+=`Sua resposta:${respostas[2]} Resposta certa: Pica `
+     }
+
+     if(quatro==0){
+        div_respostas.innerHTML+=`Sua resposta:${respostas[3]} Resposta certa: 400 `
+     }
+
+     if(cinco==0){
+        div_respostas.innerHTML+=`Sua resposta:${respostas[4]} Resposta certa: 272 `
+     }
+
+     if(seis==0){
+        div_respostas.innerHTML+=`Sua resposta:${respostas[5]} Resposta certa: 1997 `
+     }
+
+     if(sete==0){
+        div_respostas.innerHTML+=`Sua resposta:${respostas[6]} Resposta certa: Gol D. Roger`
+     }
+
+     if(oito==0){
+        div_respostas.innerHTML+=`Sua resposta:${respostas[7]} Resposta certa: Edward Newgate`
+     }
+
+     if(nove==0){
+        div_respostas.innerHTML+=`Sua resposta:${respostas[8]} Resposta certa: Boa Sandersonia`
+     }
+
+     if(dez==0){
+        div_respostas.innerHTML+=`Sua resposta:${respostas[9]} Resposta certa: Boa Marigold `
+     }
         aguardar();
 
         //Recupere o valor da nova input pelo nome do id
