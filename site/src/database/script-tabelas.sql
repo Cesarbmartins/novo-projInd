@@ -32,14 +32,16 @@ foreign key (fkPersonagem) references personagem(idPersonagem)
 );
 
 create table quiz(
-idQuiz int,
+idQuiz int auto_increment,
 total int,
 fkUsuario int,
 foreign key (fkUsuario) references usuario(id),
 primary key (idQuiz,fkUsuario)
 );
 
-CREATE TABLE aviso (
+
+
+CREATE TABLE coment (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	titulo VARCHAR(100),
 	descricao VARCHAR(150),
@@ -58,6 +60,10 @@ select u.user,p.nome from usuario as u join personagem as p on u.fkPersonagem=p.
 
 select u.user,q.total from quiz as q join usuario as u on u.idUsuario=q.fkUsuario;
 
+select u.id,u.user,c.titulo,c.descricao from usuario as u join coment as c on u.id=c.fk_usuario;
+
+select u.user,p.nome,c.titulo,c.descricao from usuario as u join coment as c on u.id=c.fk_usuario
+                                                                              join personagem as p on u.fkPersonagem=p.idPersonagem;
 
 
 /*
