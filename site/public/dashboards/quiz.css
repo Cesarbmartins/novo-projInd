@@ -1,7 +1,7 @@
 
 
 .banner {
-    background-image: url("../assets/fundoquizz.jpg");
+    background-image: url("../assets/fundoquiz.jpg");
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -16,8 +16,8 @@
     padding-left: 400px;
 }
 .caixa-quiz{
-    background-image: url("../assets/backgroundquizcaixa.gif");
-    width: 80%;
+    background-image: url("../assets/fundoquizz.jpg");
+    width: 70%;
     height: 80vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,6 +25,7 @@
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+    margin-right: 5px;
     
 }
 .caixa-quiz p{
@@ -57,4 +58,11 @@
 #imgdoquiz{
     width: 250px;
     
+}
+
+.respostas{
+     height: 70vh;
+    font-family: fantasy;
+    background-color: red;
+    border: 5px solid black ;
 }

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="estilodash.css">
     <script src="../js/funcoes.js"></script>
    
-    <title>Document</title>
+    <title>Quiz</title>
 </head>
 
     
@@ -20,7 +20,8 @@
                 <h1>One Project</h1>
     
                 <div class="hello">
-                    <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                    <img src="../assets/luffy.jpg" >
+                    <h3>Opa, <span id="b_usuario">usuário</span>!</h3>
                 </div>
     
                 
@@ -60,6 +61,7 @@
                 <img src="" alt="" id="imgdoquiz">
                 <button onclick="pergunta1()">Iniciar quiz!</button>
             </div>
+            <div id="div_respostas" class="respostas"></div>
             <div class="loading-div" id="div_aguardar">
                 <img src="./assets/circle-loading.gif" alt="" id="loading-gif">
                    </div>
@@ -252,7 +254,7 @@ respostas.push(resposta)
         respostas.push(resposta)
 
         caixa_quiz.innerHTML = `<p>Qual o nome dessa personagem?</p>
-        <img src="../assets/boasandersonia.png" alt="" id="imgdoquiz">
+        <img src="../assets/boasandersonia.jpg" alt="" id="imgdoquiz">
         <input id="in_resposta">
         <button onclick="pergunta10()">Responder</button>  
 `
@@ -290,61 +292,59 @@ respostas.push(resposta)
         <img src="../assets/luffyrindo.gif" alt="" id="imgdoquiz">
         <p>Respostas certas:<span id="sp_certas"></span></p>
 
-        <div id="div_respostas"></div>
+       
         `
+        
         } else{
             caixa_quiz.innerHTML=`<p> Ihhh assistiu o piratinha que estica mesmo</p>
         <img src="../assets/luffycrianca.gif" alt="" id="imgdoquiz">
         <p>Respostas certas:<span id="sp_certas"></span></p>
-        <div id="div_respostas"></div>
         `
         }
        sp_certas.innerHTML=respostas_certas
     
      if(um==0){
-        div_respostas.innerHTML=`Sua resposta:${respostas[0]} Resposta certa: Gaimon`
+        div_respostas.innerHTML=`Sua resposta:${respostas[0]} <br> Resposta certa: Gaimon<br>`
      }
    
      
      if(dois==0){
-        div_respostas.innerHTML+=`Sua resposta:${respostas[1]} Resposta certa: Alvida `
+        div_respostas.innerHTML+=`Sua resposta:${respostas[1]} <br> Resposta certa: Alvida <br>`
      }
 
      if(tres==0){
-        div_respostas.innerHTML+=`Sua resposta:${respostas[2]} Resposta certa: Pica `
+        div_respostas.innerHTML+=`Sua resposta:${respostas[2]} <br> Resposta certa: Pica <br>`
      }
 
      if(quatro==0){
-        div_respostas.innerHTML+=`Sua resposta:${respostas[3]} Resposta certa: 400 `
+        div_respostas.innerHTML+=`Sua resposta:${respostas[3]} <br> Resposta certa: 400 <br>`
      }
 
      if(cinco==0){
-        div_respostas.innerHTML+=`Sua resposta:${respostas[4]} Resposta certa: 272 `
+        div_respostas.innerHTML+=`Sua resposta:${respostas[4]} <br> Resposta certa: 272 <br>`
      }
 
      if(seis==0){
-        div_respostas.innerHTML+=`Sua resposta:${respostas[5]} Resposta certa: 1997 `
+        div_respostas.innerHTML+=`Sua resposta:${respostas[5]} <br> Resposta certa: 1997 <br>`
      }
 
      if(sete==0){
-        div_respostas.innerHTML+=`Sua resposta:${respostas[6]} Resposta certa: Gol D. Roger`
+        div_respostas.innerHTML+=`Sua resposta:${respostas[6]} <br> Resposta certa: Gol D. Roger <br>`
      }
 
      if(oito==0){
-        div_respostas.innerHTML+=`Sua resposta:${respostas[7]} Resposta certa: Edward Newgate`
+        div_respostas.innerHTML+=`Sua resposta:${respostas[7]} <br> Resposta certa: Edward Newgate <br>`
      }
 
      if(nove==0){
-        div_respostas.innerHTML+=`Sua resposta:${respostas[8]} Resposta certa: Boa Sandersonia`
+        div_respostas.innerHTML+=`Sua resposta:${respostas[8]} <br> Resposta certa: Boa Sandersonia <br>`
      }
 
      if(dez==0){
-        div_respostas.innerHTML+=`Sua resposta:${respostas[9]} Resposta certa: Boa Marigold `
+        div_respostas.innerHTML+=`Sua resposta:${respostas[9]} <br> Resposta certa: Boa Marigold <br>`
      }
         aguardar();
 
-        //Recupere o valor da nova input pelo nome do id
-        // Agora vá para o método fetch logo abaixo
        var totalVar=respostas_certas
         
 

@@ -49,11 +49,6 @@ body {
 }
 
 
-/* BANNER */
-
-
-
-
 
 .tamanho-conteudo { 
   height: fit-content !important;
@@ -114,6 +109,11 @@ button {
   width: 80%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.hello img{
+  width:120px;
 }
 
 .hello h3 {
