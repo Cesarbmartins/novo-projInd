@@ -12,8 +12,7 @@ body {
 
 .dash-right .avisos {
   width: 100%;
-  /* border: 3px solid pink; */
-  color: rgb(216, 216, 216);
+  color: red;
   font-family: "Exo 2", sans-serif;
 }
 
@@ -38,14 +37,14 @@ body {
 .dash-right .avisos .div-form input {
   width: 100%;
   border-radius: 5px;
+  background-color: rgb(240, 240, 6);
 }
 
 .dash-right .avisos .div-form textarea {
   width: 100%;
-  /* color: #E6005A; */
-  border: 3px solid #e6005a;
-  background-color: white;
-  border-radius: 5px;
+  color: #212124;
+  background-color: rgb(240, 240, 6);
+  border-radius: 2px;
 }
 
 .dash-right .avisos .div-form button {
@@ -56,9 +55,9 @@ body {
   font-weight: 600;
   font-size: 18px;
   padding: 10px 15px;
-  color: white;
-  background-color: #e6005a;
-  width: 120px;
+  color: rgb(240, 240, 6);
+  background-color: black;
+  width: 150px;
 }
 
 .publicacao-btn-editar {
@@ -69,8 +68,8 @@ body {
   font-weight: 600;
   font-size: 14px;
   padding: 5px 8px;
-  color: white;
-  background-color: #e6005a;
+  color: black;
+background-color: rgb(240, 240, 6);
   width: 80px;
 }
 
@@ -81,7 +80,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  border-bottom: 3px solid #e6005a;
+  border: rgb(240, 240, 6);
   padding: 20px;
 }
 
@@ -120,13 +119,6 @@ body {
   top: 0;
   left: 25%;
   background-color: #161618;
-
-  /* width: 75%;
-    display: flex;
-    background-color: #161618;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;*/
   height: 100vh;
 }
 
@@ -138,96 +130,8 @@ body {
   margin-top: 30px;
 }
 
-.perigo-frio {
-  background-color: #5c6bc0;
-}
-
-.perigo-quente {
-  background-color: #ff7043;
-}
-
-.alerta-frio {
-  background-color: #42a5f5;
-}
-
-.alerta-quente {
-  background-color: #ffee58;
-}
-
-.ideal {
-  background-color: #9ccc65;
-}
-
-.item-regua {
-  padding: 5px;
-  width: 15%;
-  margin: 5px;
-  text-align: center;
-  padding-top: 15px;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 450px;
-  width: 100%;
-  align-items: center;
-  color: white;
-}
-
-.card {
-  margin: 2%;
-  width: 40%;
-  flex-wrap: wrap;
-  display: flex;
-  text-align: center;
-  height: 180px;
-  justify-content: right;
-  background-color: #212124;
-  font-size: 20px;
-}
-
-.card p {
-  margin: 0;
-  font-size: 50px;
-  font-weight: lighter;
-  text-align: left;
-}
-
-.cards h1 {
-  font-size: 22px;
-  width: 100%;
-  border-bottom: solid white 1px;
-  text-align: left;
-  font-weight: lighter;
-  margin: 20px;
-}
-
-.temperatura,
-.umidade {
-  margin: 5px;
-  margin-left: 20px;
-  width: 75%;
-}
-
-.cor-alerta {
-  width: 13%;
-  height: 30%;
-  border-radius: 50px;
-  margin-top: 6%;
-  /* background-color: #c7c7c7; */
-}
-
-.btns-dash {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 30px;
-}
-
 .graph {
-  width: 60%;
+  width: 75%;
   margin: auto;
   padding-top: 10px;
 }
@@ -238,14 +142,12 @@ body {
   justify-content: center;
 }
 
-.btn-chart {
-  font-family: "Exo 2", sans-serif;
-  border: 0;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 10px 15px;
-  color: #e6005a;
-  background-color: white;
-  margin: 5px;
-  border-radius: 3px;
+.img_personagens{
+  display: flex;
+  justify-content: space-around;
+  margin-left: 35px;
+}
+
+img{
+  width: 100px;
 }

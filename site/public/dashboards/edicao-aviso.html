@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AquaTech | Página Inicial</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="estilodash.css">
     <link rel="stylesheet" href="./dashboards.css">
     <script src="../js/funcoes.js"></script>
 
@@ -68,20 +68,20 @@
                             <input id="input_id" maxlength="100" type="text" style="color: rgb(196, 196, 196)" disabled>
                         </label>
                         <label>
-                            Autor:
+                            User:
                             <br>
                             <input id="input_nome" maxlength="100" type="text" style="color: rgb(196, 196, 196)"
                                 disabled>
                         </label>
                         <label>
-                            Título:
+                            O que achou do site?:
                             <br>
                             <input id="input_titulo" maxlength="100" type="text" style="color: rgb(196, 196, 196)"
                                 disabled>
                         </label>
                         <br>
                         <label>
-                            Descrição (máximo de 250 caracteres):
+                            Edite aqui:
                             <br>
                             <textarea id="textarea_descricao" maxlength="250" rows="5"></textarea>
                         </label>
@@ -115,7 +115,7 @@
 
             if (resposta.ok) {
                 window.alert("Post atualizado com sucesso pelo usuario de email: " + sessionStorage.getItem("EMAIL_USUARIO") + "!");
-                window.location = "/dashboard/mural.html"
+                window.location = "/dashboards/mural.html"
             } else if (resposta.status == 404) {
                 window.alert("Deu 404!");
             } else {
