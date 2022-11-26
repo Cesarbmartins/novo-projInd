@@ -26,13 +26,12 @@
     
                 
                     <div class="btn-nav">
-                    <a href="">
-                        <h3>Quiz</h3>
-                    </a>
-                </div>
+                       <h3>Quiz</h3>    
+                   
+                    </div>
     
                 <div class="btn-nav-white">
-                   <a href="dashboard.html">
+                   <a href="./dashboard.html">
                     <h3>Gráficos</h3>
                 </a>
                 </div>
@@ -348,15 +347,14 @@ respostas.push(resposta)
        var totalVar=respostas_certas
         
 
-        // Enviando o valor da nova input
+        
         fetch("/quiz/pontuacao", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
+                
                 totalServer:totalVar
         
             })
