@@ -20,8 +20,13 @@
     justify-content: space-between;
 }
 
+.container h1{
+    margin-right: 450px;
+}
+
 #logo {
     width: 100px;
+        
 }
 
 h1 {
@@ -54,10 +59,13 @@ li a {
 
 }
 
+
 .banner .container{
     justify-content: center;
     align-items: center;
 }
+
+
 .caixa-formulario{
   background-color: rgb(240, 240, 6);
   width: 300px;
@@ -123,16 +131,8 @@ li a {
 }
     
 .footer .container{
-    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-
-}
-
-.container2{
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-direction: column;
+    justify-content: center;
 }
 
 .card_erro {

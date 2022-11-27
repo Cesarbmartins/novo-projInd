@@ -20,6 +20,10 @@
     justify-content: space-between;
 }
 
+.container h1{
+    margin-right: 450px;
+}
+
 #logo {
     width: 100px;
 }
@@ -66,7 +70,7 @@ li a {
 
 
 .tema {
-    background-image: url("./assets/images.jpg");
+    background-image: url("./assets/fundoplaquinhas.jpeg");
     width: 100%;
     height: 95vh;
     background-repeat: no-repeat;
@@ -76,6 +80,7 @@ li a {
 .tema .caixas,
 .caixa {
     display: flex;
+    justify-content: space-around;
 }
 
 .caixa {
@@ -98,15 +103,8 @@ li a {
 }
     
 .footer .container{
-    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
 
 }
 
-.container2{
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-direction: column;
-
-}
