@@ -87,3 +87,17 @@ li a {
  width:200px;
 }
 
+body::-webkit-scrollbar{
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: rgb(0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb{
+background-color: rgb(240, 240, 6);
+border-radius: 22px;
+}
+
+

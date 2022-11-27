@@ -108,3 +108,16 @@ li a {
 
 }
 
+body::-webkit-scrollbar{
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: rgb(0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb{
+background-color: red;
+border-radius: 22px;
+}
+
