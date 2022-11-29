@@ -77,6 +77,7 @@
     
     var respostas_certas = 0
     var respostas=[]
+    var respostaCerta=['GAIMON','ALVIDA','PICA',400,272,1997,'GOL D. ROGER','EDWARD NEWGATE','BOA SANDERSONIA','BOA MARIGOLD']
 
     var um=0
     var dois=0
@@ -302,47 +303,16 @@ respostas.push(resposta)
         }
        sp_certas.innerHTML=respostas_certas
     
-     if(um==0){
-        div_respostas.innerHTML=`Sua resposta:${respostas[0]} <br> Resposta certa: Gaimon<br>`
-     }
-   
-     
-     if(dois==0){
-        div_respostas.innerHTML+=`Sua resposta:${respostas[1]} <br> Resposta certa: Alvida <br>`
-     }
-
-     if(tres==0){
-        div_respostas.innerHTML+=`Sua resposta:${respostas[2]} <br> Resposta certa: Pica <br>`
-     }
-
-     if(quatro==0){
-        div_respostas.innerHTML+=`Sua resposta:${respostas[3]} <br> Resposta certa: 400 <br>`
-     }
-
-     if(cinco==0){
-        div_respostas.innerHTML+=`Sua resposta:${respostas[4]} <br> Resposta certa: 272 <br>`
-     }
-
-     if(seis==0){
-        div_respostas.innerHTML+=`Sua resposta:${respostas[5]} <br> Resposta certa: 1997 <br>`
-     }
-
-     if(sete==0){
-        div_respostas.innerHTML+=`Sua resposta:${respostas[6]} <br> Resposta certa: Gol D. Roger <br>`
-     }
-
-     if(oito==0){
-        div_respostas.innerHTML+=`Sua resposta:${respostas[7]} <br> Resposta certa: Edward Newgate <br>`
-     }
-
-     if(nove==0){
-        div_respostas.innerHTML+=`Sua resposta:${respostas[8]} <br> Resposta certa: Boa Sandersonia <br>`
-     }
-
-     if(dez==0){
-        div_respostas.innerHTML+=`Sua resposta:${respostas[9]} <br> Resposta certa: Boa Marigold <br>`
-     }
-        aguardar();
+       for (var i = 0; i < respostas.length; i++) {
+        var atual= respostas[i];
+        
+        if(atual!=respostaCerta[i]){
+            div_respostas.innerHTML+=`Sua resposta ${atual}<br>
+            Resposta certa:${respostaCerta[i]}<br>`
+        }
+       } 
+       
+       aguardar();
 
        var totalVar=respostas_certas
         
@@ -355,8 +325,8 @@ respostas.push(resposta)
             },
             body: JSON.stringify({
                 
-                totalServer:totalVar
-        
+                totalServer:totalVar,
+                fkUsuario:sessionStorage.ID_USUARIO
             })
         }).then(function (resposta) {
 

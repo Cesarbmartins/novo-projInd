@@ -3,15 +3,15 @@ var quizModel = require("../models/quizModel");
 
 function pontuacao(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-    var total=req.body.totalServer
-
+    var total=req.body.totalServer;
+    var fkUsuario=req.body.fkUsuario;
     // Faça as validações dos valores
     if (total == undefined) {
         res.status(400).send("Seu nome está undefined!");
     }  else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        quizModel.pontuacao(total)
+        quizModel.pontuacao(total,fkUsuario)
             .then(
                 function (resultado) {
                     res.json(resultado);
